@@ -1,0 +1,66 @@
+{
+  "name": "gitscan",
+  "version": "1.2.4",
+  "private": true,
+  "description": "Live momentum signals for GitHub repositories — track stars, forks, and community growth in real time.",
+  "author": "JayOdom <jayodom@usegitscan.xyz>",
+  "license": "MIT",
+  "homepage": "https://usegitscan.xyz",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/JayOdom2557/gitscan.git"
+  },
+  "keywords": [
+    "github",
+    "repository-analytics",
+    "developer-tools",
+    "momentum-signals",
+    "open-source",
+    "leaderboard",
+    "web3"
+  ],
+  "scripts": {
+    "dev": "next dev --turbopack",
+    "build": "next build",
+    "start": "next start",
+    "lint": "next lint",
+    "format": "prettier --write \"src/**/*.{ts,tsx,css}\"",
+    "format:check": "prettier --check \"src/**/*.{ts,tsx,css}\"",
+    "typecheck": "tsc --noEmit",
+    "db:generate": "supabase gen types typescript --project-id $SUPABASE_PROJECT_ID > src/lib/supabase/types.ts",
+    "db:migrate": "supabase db push",
+    "db:seed": "tsx scripts/seed.ts"
+  },
+  "dependencies": {
+    "@reown/appkit": "^1.7.18",
+    "@reown/appkit-adapter-ethers": "^1.7.18",
+    "@supabase/ssr": "^0.6.1",
+    "@supabase/supabase-js": "^2.49.4",
+    "ethers": "^6.13.5",
+    "framer-motion": "^12.6.3",
+    "lucide-react": "^0.474.0",
+    "next": "15.3.1",
+    "react": "^19.1.0",
+    "react-dom": "^19.1.0",
+    "recharts": "^2.15.3",
+    "swr": "^2.3.3",
+    "zod": "^3.24.2"
+  },
+  "devDependencies": {
+    "@tailwindcss/postcss": "^4.1.4",
+    "@types/node": "^22.14.1",
+    "@types/react": "^19.1.2",
+    "@types/react-dom": "^19.1.2",
+    "autoprefixer": "^10.4.21",
+    "eslint": "^9.25.1",
+    "eslint-config-next": "15.3.1",
+    "postcss": "^8.5.3",
+    "prettier": "^3.5.3",
+    "tailwindcss": "^4.1.4",
+    "tsx": "^4.19.3",
+    "typescript": "^5.8.3"
+  },
+  "engines": {
+    "node": ">=20.0.0"
+  }
+}
