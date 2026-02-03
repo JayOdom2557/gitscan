@@ -1,0 +1,69 @@
+@import 'tailwindcss';
+
+@layer base {
+  :root {
+    --brand: #0988f0;
+    --background: #0a0a0a;
+    --foreground: #e5e7eb;
+    --surface: #111113;
+    --surface-2: #1a1a1e;
+    --surface-3: #232328;
+    --border: rgba(255, 255, 255, 0.08);
+    --muted: #71717a;
+    --radius: 0.75rem;
+  }
+
+  * {
+    border-color: var(--border);
+  }
+
+  body {
+    background: var(--background);
+    color: var(--foreground);
+  }
+
+  ::selection {
+    background: rgba(9, 136, 240, 0.3);
+    color: #fff;
+  }
+}
+
+@layer components {
+  .glass-card {
+    background: rgba(17, 17, 19, 0.6);
+    backdrop-filter: blur(12px) saturate(1.4);
+    border: 1px solid rgba(255, 255, 255, 0.06);
+    border-radius: var(--radius);
+  }
+
+  .gradient-text {
+    background: linear-gradient(135deg, #fff 0%, #0988f0 50%, #06b6d4 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+  }
+
+  .hero-glow {
+    position: absolute;
+    width: 600px;
+    height: 600px;
+    border-radius: 50%;
+    background: radial-gradient(circle, rgba(9, 136, 240, 0.12) 0%, transparent 70%);
+    pointer-events: none;
+    filter: blur(80px);
+  }
+
+  .signal-pulse {
+    animation: pulse-glow 3s ease-in-out infinite;
+  }
+}
+
+@layer utilities {
+  .tabular-nums {
+    font-variant-numeric: tabular-nums;
+  }
+
+  .text-balance {
+    text-wrap: balance;
+  }
+}
