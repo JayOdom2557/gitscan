@@ -1,0 +1,11 @@
+# Default owner for everything
+* @JayOdom2557
+
+# Frontend components
+/src/components/ @JayOdom2557
+
+# API routes
+/src/app/api/ @JayOdom2557
+
+# Infrastructure
+/.github/ @JayOdom2557
