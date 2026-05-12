@@ -34,7 +34,7 @@
   "dependencies": {
     "@reown/appkit": "^1.7.18",
     "@reown/appkit-adapter-ethers": "^1.7.18",
-    "@supabase/ssr": "^0.6.1",
+    "@supabase/ssr": "^0.10.3",
     "@supabase/supabase-js": "^2.49.4",
     "ethers": "^6.13.5",
     "framer-motion": "^12.6.3",
